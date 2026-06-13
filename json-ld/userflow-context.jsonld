@@ -1,0 +1,100 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "https://schema.org/",
+    "userflow": "https://api.userflow.com/vocab#",
+
+    "User": {
+      "@id": "userflow:User",
+      "@type": "@id",
+      "description": "A user record within the Userflow platform representing an end-user of the integrated SaaS product."
+    },
+    "userId": {
+      "@id": "userflow:userId",
+      "@type": "xsd:string",
+      "description": "The unique identifier for a Userflow user, typically matching the integrating app's own user ID."
+    },
+    "attributes": {
+      "@id": "userflow:attributes",
+      "@type": "@json",
+      "description": "A free-form JSON object of key-value pairs describing user properties used to personalise flows and target segments."
+    },
+    "Event": {
+      "@id": "userflow:Event",
+      "@type": "@id",
+      "description": "A custom event emitted by the integrating application to signal that a user performed a meaningful action."
+    },
+    "eventName": {
+      "@id": "userflow:eventName",
+      "@type": "xsd:string",
+      "description": "The string name identifying the type of event, e.g. 'signed_up' or 'feature_used'."
+    },
+    "Group": {
+      "@id": "userflow:Group",
+      "@type": "@id",
+      "description": "A company or organisational group that users can be members of within Userflow."
+    },
+    "groupId": {
+      "@id": "userflow:groupId",
+      "@type": "xsd:string",
+      "description": "The unique identifier for a Userflow group/company."
+    },
+    "Membership": {
+      "@id": "userflow:Membership",
+      "@type": "@id",
+      "description": "The association between a User and a Group, optionally carrying role or membership-specific attributes."
+    },
+    "Flow": {
+      "@id": "userflow:Flow",
+      "@type": "@id",
+      "description": "An in-app guided walkthrough built in Userflow to onboard or educate a user through a feature or workflow."
+    },
+    "Checklist": {
+      "@id": "userflow:Checklist",
+      "@type": "@id",
+      "description": "An in-app task list shown to users to guide completion of onboarding or adoption milestones."
+    },
+    "Announcement": {
+      "@id": "userflow:Announcement",
+      "@type": "@id",
+      "description": "An in-app notification or modal surfaced to users to communicate product updates or news."
+    },
+    "NPSSurvey": {
+      "@id": "userflow:NPSSurvey",
+      "@type": "@id",
+      "description": "A Net Promoter Score survey delivered in-app to measure user satisfaction and loyalty."
+    },
+    "apiKey": {
+      "@id": "userflow:apiKey",
+      "@type": "xsd:string",
+      "description": "A Bearer token API key scoped to a specific Userflow environment, used to authenticate REST API requests."
+    },
+    "environment": {
+      "@id": "userflow:environment",
+      "@type": "xsd:string",
+      "description": "The Userflow environment (e.g. production, staging) an API key is scoped to."
+    },
+    "cursor": {
+      "@id": "userflow:cursor",
+      "@type": "xsd:string",
+      "description": "An opaque pagination cursor used in list endpoints to retrieve the next page of results."
+    },
+    "name": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+    "email": {
+      "@id": "schema:email",
+      "@type": "xsd:string"
+    },
+    "createdAt": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "updatedAt": {
+      "@id": "schema:dateModified",
+      "@type": "xsd:dateTime"
+    }
+  }
+}
