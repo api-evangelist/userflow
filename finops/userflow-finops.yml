@@ -1,0 +1,95 @@
+name: Userflow FinOps
+description: >
+  FinOps Framework FOCUS-aligned cost and usage data for the Userflow product
+  onboarding and adoption platform. Costs are driven primarily by monthly active
+  users (MAUs) with additional charges for AI credits and overage MAU bundles.
+specificationVersion: "1.0"
+url: https://www.userflow.com/pricing
+publisher: Userflow
+currency: USD
+billingPeriod: monthly
+costDrivers:
+  - name: Monthly Active Users (MAUs)
+    description: >
+      The primary cost driver. Each plan includes a baseline MAU allotment.
+      Users who interact with any Userflow content (flows, checklists, surveys,
+      announcements) within a billing period count toward the MAU total.
+    unit: MAU
+    metric: monthly_active_users
+    tiers:
+      - plan: Startup
+        includedUnits: 3000
+        overageUnit: 5000 MAUs
+        overagePrice: 100
+        billingCycle: monthly
+      - plan: Startup (annual)
+        includedUnits: 3000
+        overageUnit: 5000 MAUs
+        overagePrice: 100
+        billingCycle: annual
+      - plan: Pro
+        includedUnits: 10000
+        overageUnit: 5000 MAUs
+        overagePrice: 100
+        billingCycle: monthly
+      - plan: Pro (annual)
+        includedUnits: 10000
+        overageUnit: 5000 MAUs
+        overagePrice: 80
+        billingCycle: annual
+  - name: AI Credits
+    description: >
+      AI credits are consumed by Userflow's AI-powered features such as FlowAI
+      Insights and the AI assistant. Each plan includes 100 credits per month.
+      Additional credits can be purchased in 500-credit bundles.
+    unit: credits
+    metric: ai_credits_consumed
+    tiers:
+      - plan: Startup
+        includedUnits: 100
+        overageUnit: 500 credits
+        overagePrice: 100
+        billingCycle: monthly
+      - plan: Startup (annual)
+        includedUnits: 100
+        overageUnit: 500 credits
+        overagePrice: 80
+        billingCycle: annual
+      - plan: Pro
+        includedUnits: 100
+        overageUnit: 500 credits
+        overagePrice: 100
+        billingCycle: monthly
+      - plan: Pro (annual)
+        includedUnits: 100
+        overageUnit: 500 credits
+        overagePrice: 80
+        billingCycle: annual
+baseCosts:
+  - plan: Startup
+    monthlyCost: 300
+    annualCost: 2880
+    annualMonthlyCost: 240
+    savings: 720
+    savingsPercent: 20
+  - plan: Pro
+    monthlyCost: 850
+    annualCost: 8160
+    annualMonthlyCost: 680
+    savings: 2040
+    savingsPercent: 20
+  - plan: Enterprise
+    monthlyCost: 0
+    annualCost: 0
+    notes: Custom pricing — contact sales
+costOptimizationTips:
+  - description: Commit to annual billing to save approximately 20% vs monthly.
+  - description: >
+      Monitor MAU counts proactively to avoid unexpected overage charges;
+      inactive or test users should be excluded from production environments.
+  - description: >
+      Use staging environments (available on Pro and above) to avoid counting
+      test interactions toward production MAU totals.
+  - description: >
+      Review AI credit consumption regularly; unused credits do not roll over
+      between billing periods.

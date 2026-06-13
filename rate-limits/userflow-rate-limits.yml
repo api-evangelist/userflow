@@ -1,0 +1,33 @@
+name: Userflow API Rate Limits
+description: >
+  Rate limiting details for the Userflow REST API. Limits are enforced per API key
+  and per environment. Exact per-plan thresholds are not publicly documented; clients
+  should handle HTTP 429 responses with exponential backoff.
+specificationVersion: "0.1"
+url: https://docs.userflow.com/docs/api
+limits:
+  - name: Per API Key Rate Limit
+    description: >
+      Requests are rate-limited per API key. When the limit is exceeded, the API
+      returns HTTP 429 Too Many Requests. Specific request-per-second or
+      request-per-minute thresholds are not publicly disclosed and may vary by plan.
+    scope: api-key
+    httpStatus: 429
+    retryBehavior: exponential backoff recommended
+    documented: false
+  - name: Pagination Limit
+    description: >
+      List endpoints use cursor-based pagination. The default page size is 20 records
+      per response, and the maximum page size is 100 records. Use the starting_after
+      parameter with the last returned resource ID to fetch subsequent pages.
+    type: pagination
+    defaultPageSize: 20
+    maxPageSize: 100
+    paginationParam: starting_after
+    documented: true
+    url: https://docs.userflow.com/docs/api
+notes: >
+  Userflow does not publicly document per-plan rate limit thresholds. Implement
+  exponential backoff on HTTP 429 responses. Contact Userflow support for
+  enterprise-level rate limit inquiries. API keys are scoped per environment
+  (production, staging) and configured under Settings -> API in the Userflow dashboard.

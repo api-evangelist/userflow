@@ -1,0 +1,81 @@
+name: Userflow Plans and Pricing
+description: Pricing tiers for the Userflow product onboarding and adoption platform, based on monthly active users (MAUs).
+specificationVersion: "0.1"
+url: https://www.userflow.com/pricing
+plans:
+  - name: Startup
+    description: >
+      For smaller product teams launching in-app onboarding and engagement.
+      Covers core use cases including guided flows, checklists, announcements,
+      and basic analytics. Limited to 3 team members.
+    monthlyPrice: 300
+    annualPrice: 240
+    unit: per month
+    billingOptions:
+      - monthly
+      - annually
+    includedMAUs: 3000
+    features:
+      - Guided flows
+      - Checklists
+      - Announcements
+      - Banners
+      - NPS and in-app surveys (2 questions max)
+      - Basic analytics
+      - 3 team member seats
+      - 100 AI credits per month
+      - Core integrations
+    overages:
+      - name: Additional MAUs
+        description: Additional 5,000-user bundles
+        price: 100
+        unit: per 5,000 MAUs per month
+  - name: Pro
+    description: >
+      For growing product teams needing advanced targeting, deeper integrations,
+      and unlimited team members. Includes company-level targeting, Salesforce
+      and HubSpot integrations, and AI-powered flow insights.
+    monthlyPrice: 850
+    annualPrice: 680
+    unit: per month
+    billingOptions:
+      - monthly
+      - annually
+    includedMAUs: 10000
+    features:
+      - Everything in Startup
+      - Unlimited team members
+      - Company-level targeting
+      - Advanced integrations (Salesforce, HubSpot)
+      - Smartflow
+      - FlowAI Insights
+      - 100 AI credits per month
+      - Multiple environments
+    overages:
+      - name: Additional MAUs
+        description: Additional 5,000-user bundles
+        price: 80
+        unit: per 5,000 MAUs per month (annual billing)
+      - name: Additional AI credits
+        description: 500 extra AI credits
+        price: 80
+        unit: per 500 credits per month (annual billing)
+  - name: Enterprise
+    description: >
+      Custom pricing for large organizations requiring SSO, advanced permissions,
+      custom contracts, and dedicated concierge support.
+    monthlyPrice: 0
+    annualPrice: 0
+    unit: custom
+    billingOptions:
+      - custom
+    includedMAUs: 0
+    features:
+      - Everything in Pro
+      - SAML SSO
+      - Advanced permissions and roles
+      - Custom contract terms
+      - Concierge onboarding support
+      - Custom MAU limits
+      - SLA guarantees
+    notes: Contact Userflow sales for custom pricing
