@@ -4,5 +4,14 @@
   "rssConfirmed": false,
   "notes": "Blog at https://www.userflow.com/blog returns HTTP 403; no RSS/Atom feed URL could be confirmed via public fetch. Re-probe when site is accessible.",
   "lastFetched": "2026-06-13",
-  "posts": []
+  "posts": [],
+  "repo": "userflow",
+  "feeds": [
+    {
+      "source": "https://www.linkedin.com/company/userflow",
+      "error": "HTTPError"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-06-14T20:42:17Z"
 }
