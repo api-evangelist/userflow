@@ -1,0 +1,28 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.userflow.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 10 18:10:33 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: docs.userflow.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 12 18:28:53 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: api.userflow.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 15 02:28:59 2026 GMT
+  hsts: null
+domains:
+- domain: userflow.com
+  dnssec: true
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
