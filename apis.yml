@@ -36,6 +36,16 @@ tags:
   - Announcements
   - NPS Surveys
   - User Flows
+  - Software-as-a-Service
+  - Product-Led Growth
+tags_raw:
+  - User Onboarding
+  - Product Adoption
+  - In-App Guides
+  - Checklists
+  - Announcements
+  - NPS Surveys
+  - User Flows
   - SaaS
   - Product-Led Growth
 apis:
@@ -52,6 +62,11 @@ apis:
     humanURL: https://docs.userflow.com/docs/api
     baseURL: https://api.userflow.com
     tags:
+      - User
+      - Event
+      - Group
+      - Memberships
+    tags_raw:
       - Users
       - Events
       - Groups
