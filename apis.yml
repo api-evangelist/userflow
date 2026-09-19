@@ -76,7 +76,7 @@ apis:
       - User
       - Event
       - Group
-      - Memberships
+      - Membership
     tags_raw:
       - Users
       - Events
